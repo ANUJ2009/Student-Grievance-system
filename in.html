@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grievance System - Login</title>
+    <style>
+        .A1{
+            position: relative;
+            width: 500px;
+            height: 180px;
+            background-image: url("/files/img2.jpg");
+            bottom: 39%;
+            right: 25%;
+            border-radius: 1%;
+            background-size: cover;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            background-image: url("files/img.jpg");
+            background-size: cover;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="A1"></div>
+<div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return validateLogin()">
+        <input type="text" id="username" class="input-field" placeholder="Enter username" required>
+        <input type="password" id="password" class="input-field" placeholder="Enter password" required>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+</div>
+
+<script>
+    // JavaScript to handle form validation and redirect on success
+    function validateLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Simple validation: change these credentials as necessary
+        if (username === "vivek64" && password === "123000" || username === "aman64" && password === "123456") {
+            // If valid credentials, redirect to backend page
+            window.location.href = "index.html";
+        } else {
+            // If invalid, alert the user
+            alert("Invalid username or password.");
+        }
+
+        
+
+        // Return false to prevent the form from submitting normally
+        return false;
+    }
+</script>
+
+</body>
+</html>

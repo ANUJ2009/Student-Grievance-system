@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Complaint</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="n1.js"></script>
+</head>
+<body>
+  <div class="complaint-container">
+    <h2 class="h2">Submit a Grievance</h2>
+    <form action="/submit-complaint" method="POST">
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="department">Department Level</option>
+        <option value="college">Institute/College Level</option>
+        <option value="university">University Level</option>
+      </select>
+      <label for="subcategory">Subcategory:</label>
+      <select id="subcategory" name="subcategory" required>
+        <option value="admission">Admission</option>
+        <option value="finance">Finance</option>
+        <option value="examination">Examination</option>
+        <option value="timetable">Lecture Timetable</option>
+      </select>
+      
+      <label for="description">Complaint Description:</label>
+      <textarea id="description" name="description" rows="5" required></textarea>
+      
+      <button type="submit" class="i1" onclick="Submit()">Submit Complaint</button>
+      <!-- <textarea class="vk" required></textarea> -->
+            <textarea class="pi" required></textarea>
+    </form>
+  </div>
+</body>
+</html>
